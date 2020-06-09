@@ -1,11 +1,16 @@
 <?php
 class Controller
 {
+    /*
+    *   Controller folder Path    
+    */
     protected $_controllerPath = 'app/controllers/';
+
     function __construct()
     {
-        // Model n view load here
-        require $this->_controllerPath . 'Errors.php';
+        // Model n view load here        
+        $this->load = new Loader();
+        $this->uri = new URI();
     }
 
     /*

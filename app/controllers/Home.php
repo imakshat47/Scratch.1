@@ -1,16 +1,24 @@
 <?php
-class Home
+class Home extends Controller
 {
     function __construct()
     {
-        echo 'Home here';
+        parent::__construct();        
+    }
+    function index()
+    {
+        $data['title'] = "Home";
+
+        echo $this->uri->segment(2);
+
+        $this->load->view('home', $data);
     }
 
-    function index(){
-        echo 'Index';
-    }
+    function users()
+    {
+        $data['title'] = "Users";        
+        echo $this->uri->back_uri();
 
-    function users(){
-        
+        $this->load->view('home', $data);
     }
 }

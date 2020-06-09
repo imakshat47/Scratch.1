@@ -1,12 +1,16 @@
-<?php 
-class Errors{
-    function __construct()
-    {
-        
-    }
+<?php
+class Errors extends Controller
+{
+    // function __construct()
+    // {
+    // }
 
-    function _isError($_isError){
-        echo $_isError;
-        // exit;
+    function _isError($_isError)
+    {
+
+        $this->load->view('errors', [
+            'msg' => $_isError,
+            'title' => 'Error'
+        ]);
     }
 }
