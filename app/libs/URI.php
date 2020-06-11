@@ -10,17 +10,18 @@ class URI
 
     function __construct()
     {
+        
     }
 
     /*
     *   @param string 
     *   @return uri array or false
     */
-
     function _valid_uri($uri = null)
     {
         if ($uri) {
-            $_uri =  filter_var(rtrim($uri, '/'), FILTER_SANITIZE_URL);
+            global $_config;            
+            $_uri =  filter_var(rtrim(preg_replace($_config['preg_replace'], '', $uri), '/'), FILTER_SANITIZE_URL);
             return  explode('/', $_uri);
         } else
             return [$this->_baseController, $this->_baseMethod];

@@ -49,6 +49,24 @@
  * NOTE: If you change these, also change the error_reporting() code below
  */
 define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+// App Folder
+define('App', 'app/');
+// Lib Folder
+define('Lib', 'app/libs/');
+// Config
+define('Config', 'app/config/');
+// Controller
+define('Controllers', App . 'controllers/');
+// View
+define('Views', App . 'views/');
+// Images
+define('Images', App . 'assets/img/');
+// CSS
+define('CSS', App . 'assets/css/');
+// JS
+define('Js', App . 'assets/js/');
+
+
 
 /*
  *---------------------------------------------------------------
@@ -90,6 +108,6 @@ switch (ENVIRONMENT) {
 
 
 // use in autoloader
-require 'app/libs/Bootstrap.php';
+require Lib . 'Bootstrap.php';
 
 $app = new Bootstrap();
