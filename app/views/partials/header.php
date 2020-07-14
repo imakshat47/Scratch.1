@@ -4,51 +4,87 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="FaviconIcon" href="<?= IMAGES ?>logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="<?= IMAGES ?>logo.png" type="image/x-icon" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= base_url(CSS . 'bootstrap.min.css') ?>">
+    <!-- Custome CSS -->
+    <link rel="stylesheet" href="<?= base_url(CSS . 'style.css') ?>">
+
+    <!-- Meta Data -->
+    <meta name="name" content="" />
+    <meta name="title" content="<?= $title ?>" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Meta Property -->
+    <meta property="og:title" content="<?= $title ?>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<?= base_url() ?>" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+    <!-- SEO Optimization -->
+    <meta name="robots" content="index, follow" />
+    <meta name="csrf-param" content="authenticity_token" />
 
     <title><?= $title ?></title>
 </head>
 
-<header  class="navbar navbar-expand-lg navbar-light bg-light">
-    <nav class="container">
-        <a class="navbar-brand" href="<?= base_url() ?>">Scratch.1</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<body>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+    <header class="navbar navbar-expand-lg navbar-light bg-blue border-bottom sticky-top">
+        <nav class="container p-2">
+            <div class="col-sm-12 col-lg-2">
+                <a class="navbar-brand  color-white" href="<?= base_url() ?>"><img src="<?= IMAGES ?>logo.png" height="25px" width="25px" alt="barnd Logo"><b> Scratch</b></a>
+            </div>
+
+            <ul class="col-sm-12 col-lg-8 nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="<?= base_url('Home') ?>">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link color-white" href="<?= base_url('Home') ?>">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url() . 'Home/users/' ?>">Users</a>
+                    <a class="nav-link color-white" href="<?= base_url() ?>">User Guide</a>
                 </li>
+                <li class="nav-item  d-none d-md-block">
+                    <a class="nav-link color-white" href="#">Examples</a>
+                </li>
+                <li class="nav-item d-none d-md-block">
+                    <a class="nav-link color-white" href="#">Themes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link color-white" href="#">Blog</a>
+                </li>
+            </ul>
+
+            <ul class="col-sm-12 col-lg-2 nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        User Guide
+                    <a class="nav-link color-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        v1.0
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="<?= base_url('UserGuide/') ?>">Welcome to Scratch</a>
-                    <a class="dropdown-item" href="<?= base_url('UserGuide/install/') ?>">Installation</a>    
-                    <a class="dropdown-item" href="<?= base_url('UserGuide/tutorial/') ?>">Tutorial</a>
-                    <a class="dropdown-item" href="<?= base_url() ?>">Controllers</a>
-                        <a class="dropdown-item" href="<?= base_url() ?>">Views</a>
+                        <a class="dropdown-item" href="#">v2.0</a>
+                        <a class="dropdown-item" href="#">v3.0</a>
+
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?= base_url() ?>">Something else here</a>
+                        <a class="dropdown-item" href="<?= base_url() ?>">All Version</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link color-white" href="#">G</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link color-white" href="#">O </a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>

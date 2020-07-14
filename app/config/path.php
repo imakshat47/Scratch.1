@@ -1,5 +1,7 @@
 <?php
 
-$route['App'] = 'app/';
+global $route;
 
-$route['Controllers'] = "app/controllers";
+$route['404_notfound'] = "Errors";
+$route['error'] = "Errors";
+$route['base_controller'] = 'Home';

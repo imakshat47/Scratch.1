@@ -5,12 +5,17 @@ class Errors extends Controller
     // {
     // }
 
+    function index()
+    {
+        echo "Hell";
+    }
+
     function _isError($_isError)
     {
-
-        $this->load->view('errors', [
-            'msg' => $_isError,
-            'title' => 'Error'
-        ]);
+        echo $_isError;
+        // $this->load->view('errors', [
+        //     'msg' => $_isError,
+        //     'title' => 'Error'
+        // ]);
     }
 }

@@ -2,29 +2,23 @@
 
 class URI
 {
-    protected $_baseController = 'Home';
-    protected $_baseMethod = 'index';
-
-    // URL sanatized 
-    // $_uri = array();
-
     function __construct()
     {
-        
-    }
+        // echo 'URI';
+    }    
 
     /*
-    *   @param string 
+    *   @param string url
     *   @return uri array or false
     */
-    function _valid_uri($uri = null)
+    function __is_valid_uri($uri = null)
     {
         if ($uri) {
-            global $_config;            
-            $_uri =  filter_var(rtrim(preg_replace($_config['preg_replace'], '', $uri), '/'), FILTER_SANITIZE_URL);
+            global $config;
+            $_uri =  filter_var(rtrim(preg_replace($config['preg_replace'], '', $uri), '/'), FILTER_SANITIZE_URL);
             return  explode('/', $_uri);
         } else
-            return [$this->_baseController, $this->_baseMethod];
+            return false;
     }
 
     function server($_key)
